@@ -1,8 +1,16 @@
 <?php 
 
+require_once("config.php");
+
 class Database {
 
-    private $connection;
+    public $connection;
+    
+    function __construct(){
+        
+        $this->open_db_connetion();
+        
+    }
 
     public function open_db_connetion(){
     
