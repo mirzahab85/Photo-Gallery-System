@@ -14,7 +14,7 @@ class Database {
 
     public function open_db_connetion(){
     
-        $this->connection = mysqli_connection(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+        $this->connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
         if(mysqli_errno()){
             
@@ -25,6 +25,5 @@ class Database {
 }
 
 $database = new Database();
-$database->open_db_connetion();
 
 ?>
