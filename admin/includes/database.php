@@ -21,7 +21,18 @@ class Database {
             die("Database connection failed badly" . mysqli_error());
             
         }       
-    }      
+    }
+    
+    public function query($sql) {
+        
+        $result = mysqli_query($this->connection, $sql);
+        if(!$result) {
+            die("Quary Failed");
+        }
+        
+    return $result;
+    
+    }
 }
 
 $database = new Database();
