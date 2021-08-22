@@ -26,12 +26,22 @@ class Database {
     public function query($sql) {
         
         $result = mysqli_query($this->connection, $sql);
-        if(!$result) {
-            die("Quary Failed");
-        }
         
-    return $result;
+        return $result;
     
+    }
+
+    private function confirm_query($query){
+
+        if(!$result) {
+        die("Quary Failed");
+        }
+    }
+
+    public function escape_string($string){
+        
+        $esaped_string = mysqli_real_escape_string($this->connection,$string);
+        return $esaped_string;
     }
 }
 
