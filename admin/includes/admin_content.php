@@ -9,16 +9,18 @@
             </h1>
 
             <?php 
+
+            $user = new User();
             
-            $sql = "SELECT * FROM users WHERE id=1";
-            $result = $database->query($sql);
-            $user_found = mysqli_fetch_array($result);
-            
-            echo $user_found['username'];
+            $result_set = $user->find_all_users();
+
+            while ($row = mysqli_fetch_array($result_set)) {
+                
+            echo $row['username'] . "<br>";
+                
+            }
             
             ?>
-
-
 
             <ol class="breadcrumb">
                 <li>
