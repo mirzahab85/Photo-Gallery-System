@@ -21,11 +21,12 @@
             // }
             
             $found_user = User::find_user_by_id(2);
-                
-            
 
+            $user = User::instantation();
+                
             echo $user->id;
-            
+
+            echo "<br>";
             
             ?>
 
