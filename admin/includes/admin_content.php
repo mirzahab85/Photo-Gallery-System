@@ -22,9 +22,9 @@
             
             $found_user = User::find_user_by_id(2);
 
-            $user = User::instantation();
+            $user = User::instantation($found_user);
                 
-            echo $user->id;
+            echo $user->username;
 
             echo "<br>";
             
