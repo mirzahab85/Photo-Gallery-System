@@ -12,13 +12,13 @@
 
             
             
-            $result_set = User::find_all_users();
+            // $result_set = User::find_all_users();
 
-            while ($row = mysqli_fetch_array($result_set)) {
+            // while ($row = mysqli_fetch_array($result_set)) {
                 
-            echo $row['username'] . "<br>";
+            // echo $row['username'] . "<br>";
                 
-            }
+            // }
             
             // $found_user = User::find_user_by_id(2);
 
@@ -27,6 +27,14 @@
             // echo $user->username;
 
             // echo "<br>";
+
+            $users = User::find_all_users();
+
+            foreach($users as $user) {
+
+               echo $user->id . "<br>";
+                
+            }
             
             ?>
 
