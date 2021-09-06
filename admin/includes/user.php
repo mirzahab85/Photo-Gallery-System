@@ -23,9 +23,17 @@ return $found_user;
 }
 
 public static function find_this_query($sql) {
-global $database;
-$result_set = $database->query($sql);
-return $result_set;
+    global $database;
+    $result_set = $database->query($sql);
+    $the_object_array = array();
+
+    while($row = mysqli_fetch_array($result_set)) {
+
+    $the_object_array[] = self::instantation($row);    
+        
+    }
+
+    return $the_object_array;
     
 }
 
