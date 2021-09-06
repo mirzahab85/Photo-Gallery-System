@@ -50,7 +50,15 @@ if($the_object->has_the_attribute($the_attribute)) {
 
     return $the_object;
 
-} 
+}
+
+private function has_the_attribute($the_attribute) {
+
+$object_properties = get_object_vars($this);
+
+return array_key_exists($the_attribute, $object_properties);
+    
+}
 
 }
 
