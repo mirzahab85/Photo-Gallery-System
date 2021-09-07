@@ -28,13 +28,17 @@
 
             // echo "<br>";
 
-            $users = User::find_all_users();
+            // $users = User::find_all_users();
 
-            foreach($users as $user) {
+            // foreach($users as $user) {
 
-               echo $user->id . "<br>";
+            //    echo $user->id . "<br>";
                 
-            }
+            // }
+
+            $found_user = User::find_user_by_id(2);
+
+            echo $found_user->username;
             
             ?>
 
