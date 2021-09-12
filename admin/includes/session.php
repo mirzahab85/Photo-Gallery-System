@@ -24,7 +24,15 @@ if($user) {
     $this->user_id = $_SESSION['user_id'] = $user_id;
     $this->signed_id = true;
 }
-    
+
+}
+
+public function logout() {
+ 
+unset($_SESSION['user_id']);
+unset($this->user_id);
+$this->signed_in = false;
+
 }
 
 private function check_the_login() {
