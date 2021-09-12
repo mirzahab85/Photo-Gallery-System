@@ -20,18 +20,6 @@ $the_result_array = self::find_this_query("SELECT * FROM users WHERE id= $user_i
 
 return !empty($the_result_array) ? array_shift($the_result_array) : falase;
 
-// if(!empty($the_result_array)) {
-    
-// $first_item = array_shift($the_result_array);
-
-// return $first_item;
-
-// } else {
-
-// return false;
-    
-// }
-
 return $found_user;
 
 }
@@ -48,6 +36,14 @@ public static function find_this_query($sql) {
     }
 
     return $the_object_array;
+    
+}
+
+public static function verify_user($the_record) {
+
+global $database;
+$username = $database->escape_string($username);
+$password = $database->escape_string($password);
     
 }
 
