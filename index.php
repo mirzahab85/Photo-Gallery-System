@@ -1,30 +1,42 @@
 <?php include("includes/header.php"); ?>
 
+<?php if(!$session->is_signed_in()) {redirect("login.php");} ?>
 
-        <div class="row">
 
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
 
-    
-            
-          
-         
 
-            </div>
+
+    <?php include("includes/top_nav.php") ?>
 
 
 
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
 
-            
-                 <?php include("includes/sidebar.php"); ?>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 
 
 
-        </div>
-        <!-- /.row -->
+    <?php include("includes/side_nav.php"); ?>
 
-        <?php include("includes/footer.php"); ?>
+
+
+
+    <!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+<div id="page-wrapper">
+
+
+    <?php include("includes/admin_content.php"); ?>
+
+
+</div>
+<!-- /#page-wrapper -->
+
+<?php include("includes/footer.php");?>

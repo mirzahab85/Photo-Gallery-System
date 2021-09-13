@@ -39,7 +39,7 @@ public static function find_this_query($sql) {
     
 }
 
-public static function verify_user($the_record) {
+public static function verify_user($username, $password ) {
 
 global $database;
 $username = $database->escape_string($username);

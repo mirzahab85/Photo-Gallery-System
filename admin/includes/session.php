@@ -11,9 +11,9 @@ $this->check_the_login();
 
 }
 
-public function signed_in() {
+public function is_signed_in() {
     
-    return $this->$signed_id;
+    return $this->signed_id;
     
 }
 
