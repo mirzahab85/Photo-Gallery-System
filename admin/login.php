@@ -29,7 +29,7 @@ $the_message = "Your password or username are incorrect";
 }
 
 } else {
-$the_message = "";
+
 $username = "";
 $password = "";
 

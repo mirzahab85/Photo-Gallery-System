@@ -2,7 +2,7 @@
 
 class Session {
 
-    private $signed_id = false;
+    private $signed_in = false;
     public $user_id;
 
 function __construct() {
@@ -12,9 +12,8 @@ $this->check_the_login();
 }
 
 public function is_signed_in() {
-    
-    return $this->signed_id;
-    
+
+    return $this->signed_in;
 }
 
 public function login($user) {
