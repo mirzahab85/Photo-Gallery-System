@@ -45,8 +45,8 @@ class Database {
 
     public function escape_string($string){
         
-        $esaped_string = $this->connection->rel_escape_string($string);
-        return $esaped_string;
+        $escaped_string = $this->connection->real_escape_string($string);
+        return $escaped_string;
     }
 
     public function the_insert_id(){
