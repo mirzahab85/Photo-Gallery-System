@@ -20,7 +20,7 @@ $the_result_array = self::find_this_query("SELECT * FROM users WHERE id= $user_i
 
 return !empty($the_result_array) ? array_shift($the_result_array) : falase;
 
-return $found_user;
+return $found_user; 
 
 }
 
