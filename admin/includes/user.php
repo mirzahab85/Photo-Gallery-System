@@ -108,6 +108,22 @@ if($database->query($sql)) {
     return false;
 }
 
+} // Create Method
+
+public function update() {
+    
+$sql = "UPDATE SET";
+
+$sql .= "username= '" . $database->escape_string($this->username) . "', ";
+$sql .= "password= '" . $database->escape_string($this->password) . "', ";
+$sql .= "first_name '" . $database->escape_string($this->first_name) . "', ";
+$sql .= "last_name '" . $database->escape_string($this->last_name) . "', ";
+$sql .= "WHERE id= " . $database->escape_string($this->id);
+
+$database->query($sql);
+
+return (mysqli_affected_rows($database->connection) == 1) ? true : false;
+ 
 }
 
 }
