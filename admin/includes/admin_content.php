@@ -25,8 +25,27 @@
 
             // $user->update();
 
-            $user = User::find_user_by_id(2);
-            $user->delete();
+            // $user = User::find_user_by_id(2);
+            // $user->delete();
+
+            // $user = User::find_user_by_id(4);
+            // $user->delete();
+
+            // $user = User::find_user_by_id(1);
+            // $user->username = "WHATEVER";
+            // $user->save();
+
+            // $user = User::find_user_by_id(24);
+            // $user->password = "justpassword";
+            // $user->save(); 
+
+            // $user = new User();
+            // $user->username = "WHATEVER_2000";
+            // $user->save();
+
+            $user = User::find_user_by_id(1);
+            $user->username = "mhabul";
+            $user->save();
             
             ?>
 
