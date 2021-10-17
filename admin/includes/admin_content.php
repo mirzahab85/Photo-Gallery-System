@@ -19,6 +19,10 @@
 
             // $user->create();
 
+            $user = User::find_user_by_id(24);
+            $user->username = "WILLIAMSOM";
+            $user->update();
+
             // $user = User::find_user_by_id(3);
             
             // $user->last_name = "WILLIAMS";
@@ -35,6 +39,9 @@
             // $user->username = "WHATEVER";
             // $user->save();
 
+            // $user = User::find_user_by_id(23);
+            // $user->delete();
+            
             // $user = User::find_user_by_id(24);
             // $user->password = "justpassword";
             // $user->save(); 
@@ -46,6 +53,10 @@
             $user = User::find_user_by_id(1);
             $user->username = "mhabul";
             $user->save();
+
+            // $user = new User();
+            // $user->username = "SUAVE";
+            // $user->save();
             
             ?>
 

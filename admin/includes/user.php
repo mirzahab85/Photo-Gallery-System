@@ -2,6 +2,7 @@
 
 class User {
 
+    protected static $db_table = "users";
     public $id;
     public $username;
     public $password;
@@ -94,7 +95,7 @@ return isset($this->id) ? $this->update() : $this->create();
 public function create () {
 global $database;
 
-$sql = "INSERT INTO users (username, password, first_name, last_name)";
+$sql = "INSERT INTO " .self::$db_table . " (username, password, first_name, last_name)";
 $sql .= "VALUES ('";
 $sql .= $database->escape_string($this->username) . "', '";
 $sql .= $database->escape_string($this->password) . "', '";
@@ -118,7 +119,7 @@ public function update()
 {
    global $database;
     
-$sql = "UPDATE users SET ";
+$sql = "UPDATE " .self::$db_table . " SET ";
 $sql .= "username= '" . $database->escape_string($this->username) . "', ";
 $sql .= "password= '" . $database->escape_string($this->password) . "', ";
 $sql .= "first_name= '" . $database->escape_string($this->first_name). "', ";
@@ -135,7 +136,7 @@ public function delete()
 {
     global $database;
 
-    $sql = "DELETE FROM users ";
+    $sql = "DELETE FROM " .self::$db_table . " " ;
     $sql .= "WHERE id=". $database->escape_string($this->id);
     $sql .= " LIMIT 1";
 
