@@ -105,11 +105,7 @@ global $database;
 $properties = $this->properties();
 
 $sql = "INSERT INTO " .self::$db_table . "(" .implode(",",array_key($properties)) .")";
-$sql .= "VALUES ('";
-$sql .= $database->escape_string($this->username) . "', '";
-$sql .= $database->escape_string($this->password) . "', '";
-$sql .= $database->escape_string($this->first_name) . "', '";
-$sql .= $database->escape_string($this->last_name) . "')";
+$sql .= "VALUES ('". imploade("','", array_values($properties))     ."')";
 
 if($database->query($sql)) {
 
