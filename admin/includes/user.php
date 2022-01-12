@@ -3,6 +3,7 @@
 class User {
 
     protected static $db_table = "users";
+    protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name');
     public $id;
     public $username;
     public $password;
@@ -61,12 +62,6 @@ public static function instantation($the_record) {
     
     $the_object = new self;
 
-    // $the_object->id = $found_user['id'];
-    // $the_object->username = $found_user['username'];
-    // $the_object->password = $found_user['password'];
-    // $the_object->first_name = $found_user['first_name'];
-    // $the_object->last_name = $found_user['last_name'];
-
 foreach($the_record as $the_attribute => $value) {
 
 if($the_object->has_the_attribute($the_attribute)) {
@@ -89,8 +84,18 @@ return array_key_exists($the_attribute, $object_properties);
 }
 
 protected function properties() {
-    
-    return get_object_vars($this);
+
+    $properties = array();
+
+    foreach (self::$db_table_fields as $db_field) {
+        
+        if(property_exists($this, $db_field)) {
+            
+            $properties[$db_field] = $this->db_field;
+        }
+    }
+
+    return $properties;
     
 }
 
@@ -105,7 +110,7 @@ global $database;
 $properties = $this->properties();
 
 $sql = "INSERT INTO " .self::$db_table . "(" .implode(",",array_key($properties)) .")";
-$sql .= "VALUES ('". imploade("','", array_values($properties))     ."')";
+$sql .= "VALUES ('". implode("','", array_values($properties))     ."')";
 
 if($database->query($sql)) {
 
