@@ -84,19 +84,21 @@ return array_key_exists($the_attribute, $object_properties);
 }
 
 protected function properties() {
-
+ 
     $properties = array();
 
     foreach (self::$db_table_fields as $db_field) {
         
         if(property_exists($this, $db_field)) {
-            
-            $properties[$db_field] = $this->db_field;
-        }
-    }
 
-    return $properties;
+            $properties[$db_field] = $this->$db_field;
+            
+        }
+
+    }
     
+    return $properties;
+
 }
 
 
@@ -109,8 +111,8 @@ global $database;
 
 $properties = $this->properties();
 
-$sql = "INSERT INTO " .self::$db_table . "(" .implode(",",array_key($properties)) .")";
-$sql .= "VALUES ('". implode("','", array_values($properties))     ."')";
+$sql = "INSERT INTO " . self::$db_table ."(". implode(",", array_keys($properties)) .")";
+$sql .= "VALUES ('". implode("','", array_values($properties)) ."')";
 
 if($database->query($sql)) {
 
