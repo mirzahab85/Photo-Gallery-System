@@ -10,23 +10,23 @@
 
             <?php 
 
-            // $user = new User();
+            $user = new User();
             
-            // $user->username = "tolital197453";
-            // $user->password = "secrest_password";
-            // $user->first_name = "TOLITA";
-            // $user->last_name = "APELLIDO";
+            $user->username = "Sudent";
+            $user->password = "sometingnweirfd";
+            $user->first_name = "SOL";
+            $user->last_name = "DOnt know";
 
-            // $user->create();
+            $user->create();
 
-            $user = User::find_user_by_id(43);
+            // $user = User::find_user_by_id(43);
             
-            $user->username = "David45";
-            $user->password = "david1989";
-            $user->first_name = "David";
-            $user->last_name = "WILLIAMS";
+            // $user->username = "David45";
+            // $user->password = "david1989";
+            // $user->first_name = "David";
+            // $user->last_name = "WILLIAMS";
             
-            $user->update();
+            // $user->update();
 
             // $user = User::find_user_by_id(3);
             
