@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2021 at 12:03 PM
+-- Generation Time: Jan 16, 2022 at 08:05 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -24,6 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `photos`
+--
+
+CREATE TABLE `photos` (
+  `photo_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `size` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -36,8 +51,38 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`) VALUES
+(1, 'mhabul', 'asd123', 'Mirza', 'Habul'),
+(24, 'WILLIAMS', 'justpassword', '', ''),
+(25, 'WILLIAMS', '', '', ''),
+(41, 'tolital197453', '', '', ''),
+(42, 'username', '', '', ''),
+(43, 'David45', 'david1989', 'David', 'WILLIAMS'),
+(44, '1', '', '', ''),
+(45, 'tolital197453', '', '', ''),
+(46, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
+(47, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
+(48, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
+(49, 'David45', 'david1989', 'David', 'WILLIAMS'),
+(50, 'Sudent', 'sometingnweirfd', 'SOL', ''),
+(51, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
+(52, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
+(53, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
+(54, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
+(55, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `photos`
+--
+ALTER TABLE `photos`
+  ADD PRIMARY KEY (`photo_id`);
 
 --
 -- Indexes for table `users`
@@ -50,10 +95,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
