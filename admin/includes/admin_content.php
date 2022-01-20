@@ -55,13 +55,18 @@
             // $user->username = "WHATEVER_2000";
             // $user->save();
 
-            $user = User::find_user_by_id(1);
-            $user->username = "mhabul";
-            $user->save();
+            // $user = User::find_user_by_id(1);
+            // $user->username = "mhabul";
+            // $user->save();
 
             // $user = new User();
             // $user->username = "SUAVE";
             // $user->save();
+
+            $users = User::find_all();
+            foreach ($users as $user) {
+                echo $user->username;
+            }
             
             ?>
 
