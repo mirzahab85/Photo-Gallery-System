@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2022 at 08:05 PM
+-- Generation Time: Jan 22, 2022 at 10:42 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -63,16 +63,11 @@ INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`) VA
 (43, 'David45', 'david1989', 'David', 'WILLIAMS'),
 (44, '1', '', '', ''),
 (45, 'tolital197453', '', '', ''),
-(46, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
-(47, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
-(48, 'tolital197453', 'secrest_password', 'TOLITA', 'APELLIDO'),
-(49, 'David45', 'david1989', 'David', 'WILLIAMS'),
-(50, 'Sudent', 'sometingnweirfd', 'SOL', ''),
-(51, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
-(52, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
-(53, 'Sudent', 'sometingnweirfd', 'SOL', 'WILLIAMS'),
-(54, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
-(55, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know');
+(162, 'NEW USER', '', '', ''),
+(163, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
+(164, 'NEW USER', '', '', ''),
+(165, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
+(166, 'NEW USER', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -104,7 +99,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

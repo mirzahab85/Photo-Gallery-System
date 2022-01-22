@@ -59,14 +59,14 @@
             // $user->username = "mhabul";
             // $user->save();
 
-            // $user = new User();
-            // $user->username = "SUAVE";
-            // $user->save();
+            $user = new User();
+            $user->username = "NEW USER";
+            $user->save();
 
-            $users = User::find_all();
-            foreach ($users as $user) {
-                echo $user->username;
-            }
+            // $users = User::find_all();
+            // foreach ($users as $user) {
+            //     echo $user->username;
+            // }
             
             ?>
 
