@@ -10,14 +10,14 @@
 
             <?php 
 
-            $user = new User();
+            // $user = new User();
             
-            $user->username = "Sudent";
-            $user->password = "sometingnweirfd";
-            $user->first_name = "SOL";
-            $user->last_name = "DOnt know";
+            // $user->username = "Sudent";
+            // $user->password = "sometingnweirfd";
+            // $user->first_name = "SOL";
+            // $user->last_name = "DOnt know";
 
-            $user->create();
+            // $user->create();
 
             // $user = User::find_user_by_id(43);
             
@@ -59,14 +59,24 @@
             // $user->username = "mhabul";
             // $user->save();
 
-            $user = new User();
-            $user->username = "NEW USER";
-            $user->save();
+            // $user = new User();
+            // $user->username = "NEW USER";
+            // $user->save();
 
             // $users = User::find_all();
             // foreach ($users as $user) {
             //     echo $user->username;
             // }
+
+            // $photos = Photo::find_all();
+            // foreach ($photos as $photo) {
+            //     echo $photo->title;
+            // }
+
+            $photo = new Photo();
+            $photo->title = "Just some test title";
+            $photo->size = 20;
+            $photo->create();
             
             ?>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2022 at 10:42 PM
+-- Generation Time: Jan 24, 2022 at 09:55 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -36,6 +36,14 @@ CREATE TABLE `photos` (
   `size` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`photo_id`, `title`, `description`, `filename`, `type`, `size`) VALUES
+(1, 'Photo from the Mountaints ', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perspiciatis quasi. Ducimus quis quaerat iure quae iusto\r\nad mollitia hic repudiandae error. Numquam, aperiam natus deserunt, nostrum soluta aspernatur dolor pariatur autem at\r\nblanditiis quia corrupti odit ea, illo voluptatibus! Officiis cupiditate provident, nam aspernatur id reprehenderit\r\nomnis voluptatem qui.', 'image.jpg', 'image', 11),
+(2, 'Just some test title', '', '', '', 20);
+
 -- --------------------------------------------------------
 
 --
@@ -67,7 +75,11 @@ INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`) VA
 (163, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
 (164, 'NEW USER', '', '', ''),
 (165, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
-(166, 'NEW USER', '', '', '');
+(166, 'NEW USER', '', '', ''),
+(167, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
+(168, 'NEW USER', '', '', ''),
+(169, 'Sudent', 'sometingnweirfd', 'SOL', 'DOnt know'),
+(170, 'NEW USER', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +105,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
