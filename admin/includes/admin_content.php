@@ -73,10 +73,13 @@
             //     echo $photo->title;
             // }
 
-            $photo = new Photo();
-            $photo->title = "Just some test title";
-            $photo->size = 20;
-            $photo->create();
+            // $photo = new Photo();
+            // $photo->title = "Just some test title";
+            // $photo->size = 20;
+            // $photo->create();
+
+            echo INCLUDES_PATH;
+            // echo “admin/includes/example.jpg”;
             
             ?>
 
