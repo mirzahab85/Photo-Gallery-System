@@ -1,11 +1,10 @@
 <?php 
 
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
-define('SITE_ROOT', __DIR__  ); //Makes current directory the root directory
-defined('DS') ? null : define('SITE_ROOT', 'C:' . DS . 'xampp' . DS . 'htdocs' . DS . 'gallery');
+//define('SITE_ROOT', __DIR__  ); //Makes current directory the root directory
+// define('SITE_ROOT'); //Makes current directory the root directory
+defined('SITE_ROOT') ? null : define('SITE_ROOT', 'C:' . DS . 'xampp' . DS . 'htdocs' . DS . 'gallery');
 defined('INCLUDES_PATH') ? null : define('INCLUDES_PATH', SITE_ROOT.DS.'admin'.DS.'includes');
-
-
 
 require_once("functions.php");
 require_once("config.php");
