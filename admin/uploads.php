@@ -4,35 +4,21 @@
 
 <?php 
 
-
-
-
 $message = "";
 
 if(isset($_POST['submit'])) {
 
 $photo = new Photo();
-
 $photo->title = $_POST['title'];
-
 $photo->set_file($_FILES['file_uploaded']);
 
 if ($photo->save()) {
-
-$message = "Photo uploaded successfully";
-
+    $message = "Photo uploaded successfully";
 } else {
-
 $message = join("<br>", $photo->errors);
-
 }
 
 }
-
-
-
-
-
 
 ?>
 

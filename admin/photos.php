@@ -24,14 +24,28 @@
                     Photos
                     <small>Subheading</small>
                 </h1>
-                <ol class="breadcrumb">
-                    <li>
-                        <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
-                    </li>
-                    <li class="active">
-                        <i class="fa fa-file"></i> Blank Page
-                    </li>
-                </ol>
+
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <th>Photo</th>
+                            <th>Id</th>
+                            <th>File Name</th>
+                            <th>Tittle</th>
+                            <th>size</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--End of Table -->
+                </div>
             </div>
         </div>
         <!-- /.row -->
