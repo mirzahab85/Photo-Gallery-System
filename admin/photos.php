@@ -1,5 +1,13 @@
 <?php include("includes/header.php"); ?>
 
+<?php if(!$session->is_signed_in()) {redirect("login.php");} ?>
+
+<?php 
+
+$photos = Photo::find_all();
+
+?>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -35,13 +43,19 @@
                             <th>size</th>
                         </thead>
                         <tbody>
+
+                            <?php foreach ($photos as $photo) : ?>
+
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><img src="http://placeholder.com/350x150" alt=""></td>
+                                <td><?php echo $photo->photo_id; ?></td>
+                                <td><?php echo $photo->filename; ?></td>
+                                <td><?php echo $photo->title; ?></td>
+                                <td><?php echo $photo->size; ?></td>
                             </tr>
+
+                            <?php endforeach; ?>
+
                         </tbody>
                     </table>
                     <!--End of Table -->
