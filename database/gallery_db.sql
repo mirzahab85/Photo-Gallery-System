@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2022 at 09:55 PM
+-- Generation Time: Feb 07, 2022 at 08:09 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `photos` (
-  `photo_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -40,9 +40,10 @@ CREATE TABLE `photos` (
 -- Dumping data for table `photos`
 --
 
-INSERT INTO `photos` (`photo_id`, `title`, `description`, `filename`, `type`, `size`) VALUES
-(1, 'Photo from the Mountaints ', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, perspiciatis quasi. Ducimus quis quaerat iure quae iusto\r\nad mollitia hic repudiandae error. Numquam, aperiam natus deserunt, nostrum soluta aspernatur dolor pariatur autem at\r\nblanditiis quia corrupti odit ea, illo voluptatibus! Officiis cupiditate provident, nam aspernatur id reprehenderit\r\nomnis voluptatem qui.', 'image.jpg', 'image', 11),
-(2, 'Just some test title', '', '', '', 20);
+INSERT INTO `photos` (`id`, `title`, `description`, `filename`, `type`, `size`) VALUES
+(8, 'Car 1', '', 'images-1.jpg', 'image/jpeg', 28947),
+(9, 'Car 2', '', 'images_2.jpg', 'image/jpeg', 18578),
+(10, 'Car 3', '', 'images-6.jpg', 'image/jpeg', 21886);
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`) VA
 -- Indexes for table `photos`
 --
 ALTER TABLE `photos`
-  ADD PRIMARY KEY (`photo_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -105,7 +106,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -10,6 +10,12 @@
 
             <?php 
 
+            // $user = User::find_by_id(1);
+            // echo $user->username;
+
+            $photo = Photo::find_by_id(8);
+            echo $photo->filename;
+
             // $user = new User();
             
             // $user->username = "Sudent";
@@ -78,7 +84,7 @@
             // $photo->size = 20;
             // $photo->create();
 
-            echo INCLUDES_PATH;
+            // echo INCLUDES_PATH;
             // echo “admin/includes/example.jpg”;
             
             ?>
