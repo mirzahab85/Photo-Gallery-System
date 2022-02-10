@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2022 at 08:09 PM
+-- Generation Time: Feb 10, 2022 at 09:37 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -30,8 +30,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `photos` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `caption` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `filename` varchar(255) NOT NULL,
+  `alternate_text` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `size` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,10 +42,11 @@ CREATE TABLE `photos` (
 -- Dumping data for table `photos`
 --
 
-INSERT INTO `photos` (`id`, `title`, `description`, `filename`, `type`, `size`) VALUES
-(8, 'Car 1', '', 'images-1.jpg', 'image/jpeg', 28947),
-(9, 'Car 2', '', 'images_2.jpg', 'image/jpeg', 18578),
-(10, 'Car 3', '', 'images-6.jpg', 'image/jpeg', 21886);
+INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternate_text`, `type`, `size`) VALUES
+(8, 'Car 1', '', '', 'images-1.jpg', '', 'image/jpeg', 28947),
+(11, 'Car 2', '', '', 'images-4.jpg', '', 'image/jpeg', 23270),
+(16, 'Notebook 1', '', '', 'image-1.jpg', '', 'image/jpeg', 328747),
+(17, 'Car 4', '', '', 'images-8.jpg', '', 'image/jpeg', 20810);
 
 -- --------------------------------------------------------
 
@@ -106,7 +109,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`

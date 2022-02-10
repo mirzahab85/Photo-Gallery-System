@@ -4,8 +4,17 @@
 
 <?php 
 
+if(empty($_GET['id'])) {
+    redirect("photos.php");
+}
+
 if(isset($_POST['update'])) {
-echo "YES IT WORKS";
+    if($photo) {
+        $_POST['title'];
+        $_POST['caption'];  
+        $_POST['alternate_text'];
+        $_POST['description'];
+    }
 }
 
 // $photos = Photo::find_all();
