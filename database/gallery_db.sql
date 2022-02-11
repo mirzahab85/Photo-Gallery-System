@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2022 at 09:37 PM
+-- Generation Time: Feb 11, 2022 at 10:07 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -44,7 +44,7 @@ CREATE TABLE `photos` (
 
 INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternate_text`, `type`, `size`) VALUES
 (8, 'Car 1', '', '', 'images-1.jpg', '', 'image/jpeg', 28947),
-(11, 'Car 2', '', '', 'images-4.jpg', '', 'image/jpeg', 23270),
+(11, 'Car 2', 'Some caption', 'some description', 'images-4.jpg', 'Alternate Text', 'image/jpeg', 23270),
 (16, 'Notebook 1', '', '', 'image-1.jpg', '', 'image/jpeg', 328747),
 (17, 'Car 4', '', '', 'images-8.jpg', '', 'image/jpeg', 20810);
 
