@@ -55,7 +55,7 @@ if(isset($_POST['update']))
                     <small>Subheading</small>
                 </h1>
 
-                <form action="" method="post">
+                <form action="edit_photo.php" method="post">
 
                     <div class="col-md-8">
 
@@ -63,6 +63,10 @@ if(isset($_POST['update']))
 
                             <input type="text" name="title" class="form-control" value="<?php echo $photo->title; ?>">
 
+                        </div>
+
+                        <div class="form-group">
+                            <a class="thumbnail" href="#"><img src="<?php echo $photo->picture_path(); ?>" alt=""></a>
                         </div>
 
                         <div class=" form-group">
