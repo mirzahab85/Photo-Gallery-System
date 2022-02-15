@@ -8,14 +8,21 @@ if(empty($_GET['id'])) {
     redirect("photos.php");
 } else {
 $photo = Photo::find_by_id($_GET['id']);
-}
 
-if(isset($_POST['update'])) {
-    if($photo) {
+
+if(isset($_POST['update'])) 
+{
+    if($photo) 
+    {
         $photo->title = $_POST['title'];
-        $photo->caption = $_POST['caption'];  
+        $photo->caption = $_POST['caption'];
         $photo->alternate_text = $_POST['alternate_text'];
-        $photo->description = $_POST['description'];
+        $photo->Description = $_POST['description'];
+    
+        $photo->save();
+
+    }
+    
     }
 }
 
@@ -48,7 +55,7 @@ if(isset($_POST['update'])) {
                     <small>Subheading</small>
                 </h1>
 
-                <form action="edit_photo.php" method="post">
+                <form action="" method="post">
 
                     <div class="col-md-8">
 
