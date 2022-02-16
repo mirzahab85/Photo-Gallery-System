@@ -82,8 +82,8 @@ if(isset($_POST['update']))
 
                         </div>
                         <div class=" form-group">
-                            <label for="caption">Description</label>
-                            <textarea class="form-control" name="description" id="" cols="30" rows="10"><?php echo $photo->description; ?>
+                            <label for="summernote">Description</label>
+                            <textarea class="form-control" name="description" id="summernote" cols="30" rows="10"><?php echo $photo->description; ?>
                             </textarea>
                         </div>
 
