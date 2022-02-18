@@ -1,4 +1,12 @@
 
+    
+    
+    .admin-photo-thumbnail {
+      width: 200px;
+      border-radius: 10px;
+    }
+    
+    /************************* Edit photo page side bar styles *********************************/
     .photo-info-box {
 
     border: 1px solid #e5e5e5;

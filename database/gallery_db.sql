@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2022 at 08:20 PM
+-- Generation Time: Feb 18, 2022 at 09:08 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -46,7 +46,8 @@ INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alte
 (8, 'Car 1', 'Some caption car 1', 'some description', 'images-1.jpg', '', 'image/jpeg', 28947),
 (11, 'Car 3', 'Some caption car 3', 'some description                            ', 'images-4.jpg', 'Alternate Text car 3', 'image/jpeg', 23270),
 (16, 'Notebook 1', 'Some caption notebook 1', 'some description', 'image-1.jpg', '', 'image/jpeg', 328747),
-(17, 'Car 4', 'Some caption', 'some description', 'images-8.jpg', '', 'image/jpeg', 20810);
+(17, 'Car 4', 'Some caption', 'some description', 'images-8.jpg', '', 'image/jpeg', 20810),
+(18, 'Car 10', '', '', '_large_image_3.jpg', '', 'image/jpeg', 165053);
 
 -- --------------------------------------------------------
 
@@ -109,7 +110,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
